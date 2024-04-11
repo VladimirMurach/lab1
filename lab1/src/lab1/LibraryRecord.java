@@ -48,23 +48,21 @@ public class LibraryRecord {
 
     private void setBookList() {
         numberOfBooks = r.nextInt(3, 11);
+        BookFactory eduFactory = new EducationalFactory();
+        BookFactory ficFactory = new FictionFactory();
         for (int i = 0; i < numberOfBooks; i++) {
             int n = r.nextInt(4);
             switch (n) {
                 case 0 -> {
-                    BookFactory eduFactory = new EducationalFactory();
                     bookList.add(eduFactory.createEnglish());
                 }
                 case 1 -> {
-                    BookFactory ficFactory = new FictionFactory();
                     bookList.add(ficFactory.createEnglish());
                 }
                 case 2 -> {
-                    BookFactory eduFactory = new EducationalFactory();
                     bookList.add(eduFactory.createRussian());
                 }
                 case 3 -> {
-                    BookFactory ficFactory = new FictionFactory();
                     bookList.add(ficFactory.createRussian());
                 }
                 default -> {
