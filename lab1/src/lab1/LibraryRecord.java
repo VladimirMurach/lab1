@@ -53,23 +53,19 @@ public class LibraryRecord {
             switch (n) {
                 case 0 -> {
                     BookFactory eduFactory = new EducationalFactory();
-                    EnglishEducational book = (EnglishEducational) eduFactory.createEnglish();
-                    bookList.add(book);
+                    bookList.add(eduFactory.createEnglish());
                 }
                 case 1 -> {
                     BookFactory ficFactory = new FictionFactory();
-                    EnglishFiction book = (EnglishFiction) ficFactory.createEnglish();
-                    bookList.add(book);
+                    bookList.add(ficFactory.createEnglish());
                 }
                 case 2 -> {
                     BookFactory eduFactory = new EducationalFactory();
-                    RussianEducational book = (RussianEducational) eduFactory.createRussian();
-                    bookList.add(book);
+                    bookList.add(eduFactory.createRussian());
                 }
                 case 3 -> {
                     BookFactory ficFactory = new FictionFactory();
-                    RussianFiction book = (RussianFiction) ficFactory.createRussian();
-                    bookList.add(book);
+                    bookList.add(ficFactory.createRussian());
                 }
                 default -> {
                 }
@@ -88,5 +84,5 @@ public class LibraryRecord {
     public int getNumberOfBooks() {
         return numberOfBooks;
     }
-    
+
 }
